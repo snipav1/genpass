@@ -11,3 +11,11 @@ Setup:
 Usage:
 
     ./genpass.py
+
+
+Optional:
+Set a bash alias to generate password quickly
+
+    1. Edit ~/.bashrc
+    2. Add to end of file:
+        alias genpass='python /<path>/password_generator.py'
