@@ -13,8 +13,6 @@ import sys
 
 """
 
-<<<<<<< HEAD
-
 def main():
     special_chars = "!@#$%^&*()"
     word_length = 0
@@ -68,42 +66,3 @@ if __name__ == '__main__':
         print('\n[!] KeyboardInterrupt Detected.')
         print('[%] Exiting...')
         exit(0)
-=======
-SPECIAL_CHARS = "!@#$%^&*()"
-word_length = 0
-
-is_long = False
-while not is_long:
-    length = int(raw_input("[.] What length of password would you like: \n> "))
-    if length >= 12:
-        is_long == True
-        word_length = length
-        break
-    else:
-        print("[!] Password must be at least 12 characters long!\n")
-
-
-def generate_password(l):
-    return "".join(
-        random.choice(string.ascii_lowercase + string.digits + SPECIAL_CHARS) for
-        _ in range(l))
-
-done = False
-yes_no = ""
-
-print("[.] Press 'e' to exit")
-
-while not done or yes_no != 'e':
-
-    password = generate_password(word_length)
-
-    yes_no = raw_input("[.] Would you like to use: '{}' (y or n)?\n> ".format(password))
-
-    if yes_no == "e":
-        sys.exit()
-    elif yes_no.lower() == 'y' or yes_no.lower() == 'yes':
-        pyperclip.copy(password)
-        print("[.] '{}' copied to clipboard successfully!\n".format(password))
-        done = True
-        break
->>>>>>> 5274f5c54578629e095cd9bfcf41c2376b8ddcf8
