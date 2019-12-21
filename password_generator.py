@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import random
 import string
 import pyperclip
 import sys
 
-""" 
+"""
     @author: Emmanuel Hernandez - @snipa.v1
 
     This script will generate a complex password offline through terminal and
@@ -13,13 +13,14 @@ import sys
 
 """
 
+
 def main():
     special_chars = "!@#$%^&*()"
     word_length = 0
 
     is_long = False
     while not is_long:
-        length = int(raw_input("[.] What length of password would you like: \n    (minimum = 12) \n\n> "))
+        length = int(input("[.] What length of password would you like: \n    (minimum = 12) \n\n> "))
         if length >= 12:
             is_long == True
             word_length = length
@@ -41,7 +42,7 @@ def main():
 
         password = generate_password(word_length)
 
-        yes_no = raw_input("\n[.] Would you like to use: '{}' (y or n)?\n\n> ".format(password))
+        yes_no = input("\n[.] Would you like to use: '{}' (y or n)?\n\n> ".format(password))
 
         yes_no = yes_no.lower()
 
