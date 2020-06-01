@@ -20,18 +20,21 @@ def main():
 
     is_long = False
     while not is_long:
-        length = int(input("[.] What length of password would you like: \n    (minimum = 12) \n\n> "))
+        length = int(
+            input("[.] What length of password would you like: \
+                  \n    (minimum = 12) \n\n> "))
         if length >= 12:
-            is_long == True
-            word_length = length
+            if is_long:
+                word_length = length
             break
         else:
             print("\n[!] Password must be at least 12 characters long!\n")
 
-    def generate_password(l):
+    def generate_password(line):
         return "".join(
-            random.choice(string.ascii_lowercase + string.digits + special_chars) for
-            _ in range(l))
+            random.
+            choice(string.ascii_lowercase + string.digits + special_chars) for
+            _ in range(line))
 
     done = False
     yes_no = ""
@@ -42,7 +45,9 @@ def main():
 
         password = generate_password(word_length)
 
-        yes_no = input("\n[.] Would you like to use: '{}' (y or n)?\n\n> ".format(password))
+        yes_no = input(
+            "\n[.] Would you like to use: '{}' (y or n)?\n\n> ".
+            format(password))
 
         yes_no = yes_no.lower()
 
@@ -51,7 +56,8 @@ def main():
             sys.exit()
         if yes_no == 'y' or yes_no == 'yes':
             pyperclip.copy(password)
-            print("\n[%] '{}' copied to clipboard successfully!\n".format(password))
+            print("\n[%] '{}' copied to clipboard successfully!\n".
+                  format(password))
             done = True
             break
         elif yes_no == 'n' or yes_no == 'no':
