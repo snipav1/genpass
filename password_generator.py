@@ -6,7 +6,7 @@ import pyperclip
 import sys
 
 """
-@author: Emmanuel Hernandez - @snipa.v1
+@author: Emmanuel Hernandez - @snipav1
 
     This script will generate a complex password offline through terminal and
     copy the password to clipboard
