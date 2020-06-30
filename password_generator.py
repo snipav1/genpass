@@ -68,15 +68,15 @@ def main():
         if yes_no == "e" or yes_no == 'exit':
             print("\n[%] Exiting...")
             sys.exit()
-            if yes_no == 'y' or yes_no == 'yes':
-                pyperclip.copy(password)
-                print(
-                    f"\n[%] {Color.OKBLUE}'{password}'{Color.ENDC} copied to clipboard successfully!\n")
-                sys.exit()
-            elif yes_no == 'n' or yes_no == 'no':
-                continue
-            else:
-                print("\n[!] Please enter: 'y' or 'n'")
+        if yes_no == 'y' or yes_no == 'yes':
+            pyperclip.copy(password)
+            print(
+                f"\n[%] '{Color.OKBLUE}{password}{Color.ENDC}' copied to clipboard successfully!\n")
+            sys.exit()
+        elif yes_no == 'n' or yes_no == 'no':
+            continue
+        else:
+            print("\n[!] Please enter: 'y' or 'n'")
 
 
 if __name__ == '__main__':
