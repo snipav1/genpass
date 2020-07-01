@@ -4,6 +4,7 @@ import random
 import string
 import pyperclip
 import sys
+from termcolor import colored
 
 """
 @author: Emmanuel Hernandez - @snipav1
@@ -22,12 +23,7 @@ ______ _______ __   _  _____  _______ _______ _______
 """
 print(BANNER)
 
-SPECIAL_CHARS = "!@#$%^&*()"
-
-
-class Color:
-    OKBLUE = '\033[94m'
-    ENDC = '\033[0m'
+SPECIAL_CHARS = "!@#$%^&*"
 
 
 def generate_password(length):
@@ -59,9 +55,10 @@ def main():
     while yes_no != 'e':
 
         password = generate_password(word_length)
+        blue_password = colored(password, color='blue')
 
         yes_no = input(
-            f"\n[.] Would you like to use: '{Color.OKBLUE}{password}{Color.ENDC}' (y or n)?\n\n> ")
+            f"\n[.] Would you like to use: {blue_password} (y or n)?\n\n> ")
 
         yes_no = yes_no.lower()
 
@@ -71,7 +68,8 @@ def main():
         if yes_no == 'y' or yes_no == 'yes':
             pyperclip.copy(password)
             print(
-                f"\n[%] '{Color.OKBLUE}{password}{Color.ENDC}' copied to clipboard successfully!\n")
+                f"\n[%] {blue_password} copied to clipboard successfully!\n")
+            print('[.] Done')
             sys.exit()
         elif yes_no == 'n' or yes_no == 'no':
             continue
