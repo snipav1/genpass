@@ -49,7 +49,7 @@ def main():
             print("\n[!] Password must be at least 12 characters long!\n")
 
     yes_no = ""
-    print("[.] Word length is: {}".format(str(word_length)))
+    print("\n[.] Word length is: {}".format(str(word_length)))
 
     print("\n[!] Press 'e' or type 'exit' to exit")
 
