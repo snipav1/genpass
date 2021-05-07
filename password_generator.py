@@ -2,8 +2,9 @@
 
 import random
 import string
-import pyperclip
 import sys
+
+import pyperclip
 from termcolor import colored
 
 """
@@ -50,7 +51,7 @@ def main():
     yes_no = ""
     print("[.] Word length is: {}".format(str(word_length)))
 
-    print("\n[*] Press 'e' or type 'exit' to exit")
+    print("\n[!] Press 'e' or type 'exit' to exit")
 
     while yes_no != 'e':
 
@@ -69,7 +70,7 @@ def main():
             pyperclip.copy(password)
             print(
                 f"\n[%] {blue_password} copied to clipboard successfully!\n")
-            print('[.] Done')
+            print('[*] Done')
             sys.exit()
         elif yes_no == 'n' or yes_no == 'no':
             continue
